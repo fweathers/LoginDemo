@@ -25,8 +25,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4e-Fn-7DY">
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f1J-g8-GyK"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5s-DK-FeX">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5s-DK-FeX">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xE3-el-dfp"/>
                                 </constraints>
@@ -47,6 +50,11 @@
                             <constraint firstItem="U4e-Fn-7DY" firstAttribute="leading" secondItem="Qc3-On-FL3" secondAttribute="trailing" constant="25" id="yDI-jE-C70"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="S5s-DK-FeX" id="h9H-kr-21c"/>
+                        <outlet property="logInButton" destination="U4e-Fn-7DY" id="CiS-bD-CyC"/>
+                        <outlet property="textField" destination="8bC-Xf-vdC" id="t6O-9d-HBZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
