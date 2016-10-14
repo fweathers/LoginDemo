@@ -53,7 +53,7 @@
                     <connections>
                         <outlet property="label" destination="S5s-DK-FeX" id="h9H-kr-21c"/>
                         <outlet property="logInButton" destination="U4e-Fn-7DY" id="CiS-bD-CyC"/>
-                        <outlet property="textField" destination="8bC-Xf-vdC" id="t6O-9d-HBZ"/>
+                        <outlet property="textField" destination="Qc3-On-FL3" id="NtL-KT-Ibx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
