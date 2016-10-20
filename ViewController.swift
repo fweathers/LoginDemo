@@ -85,7 +85,7 @@ class ViewController: UIViewController {
                     
                     for result in results as! [NSManagedObject] {
                         
-                        setValue(textField.text, forKey: "name")
+                        result.setValue(textField.text, forKey: "name")
                         
                         do {
                             
@@ -99,7 +99,7 @@ class ViewController: UIViewController {
                         
                     }
                     
-                    label.text = "Hi there" + textField.text! + "!"
+                    label.text = "Hi there " + textField.text! + "!"
                 }
                 
             } catch {
@@ -158,7 +158,7 @@ class ViewController: UIViewController {
             for result in results as! [NSManagedObject] {
                 
                 if let username = result.value(forKey: "name") as? String {
-                                        
+                    
                     logoutButton.alpha = 1
                     
                     logInButton.setTitle("Update username", for: [])
