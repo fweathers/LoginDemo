@@ -14,12 +14,61 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var logoutButton: UIButton!
     
-    @IBAction func logInButtonTapped(_ sender: UIButton) {
+    @IBAction func logoutButtonTapped(_ sender: UIButton) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let context = appDelegate.persistentContainer.viewContext
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        
+        do {
+            
+            let results = try context.fetch(request)
+            
+            if results.count > 0 {
+                
+                for result in results as! [NSManagedObject] {
+                    
+                    context.delete(result)
+                    
+                    do {
+                        
+                        try context.save()
+                        
+                    } catch {
+                        
+                        print("Individual delete failed")
+                        
+                    }
+                }
+                
+                label.alpha = 0
+                
+                logoutButton.alpha = 0
+                
+                textField.alpha = 1
+                
+                logInButton.alpha = 1
+            }
+            
+        } catch {
+            
+            print("Delete failed")
+            
+        }
+    }
+    
+    @IBAction func logInButtonTapped(_ sender: UIButton) {
+        
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let context = appDelegate.persistentContainer.viewContext
+        
+        // Save a new item in an entity
         
         let newValue = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context)
         
@@ -53,6 +102,8 @@ class ViewController: UIViewController {
         let context = appDelegate.persistentContainer.viewContext
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Users")
+        
+        // Set up a request to bring the data from that item back
         
         request.returnsObjectsAsFaults = false
         

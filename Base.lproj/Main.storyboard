@@ -37,13 +37,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UWM-uV-aog">
+                                <state key="normal" title="logout"/>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dqX-ey-B30"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S5s-DK-FeX" firstAttribute="top" secondItem="U4e-Fn-7DY" secondAttribute="bottom" constant="50" id="2l3-RE-imP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U4e-Fn-7DY" secondAttribute="trailing" id="8U5-u1-cj3"/>
                             <constraint firstItem="U4e-Fn-7DY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="AOB-Zo-Zbu"/>
+                            <constraint firstItem="UWM-uV-aog" firstAttribute="leading" secondItem="S5s-DK-FeX" secondAttribute="leading" id="J0I-AE-RMk"/>
                             <constraint firstItem="S5s-DK-FeX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JJA-cF-Hs3"/>
+                            <constraint firstItem="UWM-uV-aog" firstAttribute="top" secondItem="S5s-DK-FeX" secondAttribute="bottom" constant="25" id="Vyu-r9-iJS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="S5s-DK-FeX" secondAttribute="trailing" id="dGM-5K-hZX"/>
                             <constraint firstItem="Qc3-On-FL3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="uz1-fR-EuX"/>
                             <constraint firstItem="Qc3-On-FL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xXy-LV-NOh"/>
@@ -53,6 +61,7 @@
                     <connections>
                         <outlet property="label" destination="S5s-DK-FeX" id="h9H-kr-21c"/>
                         <outlet property="logInButton" destination="U4e-Fn-7DY" id="CiS-bD-CyC"/>
+                        <outlet property="logoutButton" destination="UWM-uV-aog" id="2N9-aD-GMS"/>
                         <outlet property="textField" destination="Qc3-On-FL3" id="NtL-KT-Ibx"/>
                     </connections>
                 </viewController>
